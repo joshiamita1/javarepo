@@ -1,6 +1,11 @@
 package com.flipkart.client;
 
-import org.apache.log4j.Logger; 
+import org.apache.log4j.Logger;
+
+import com.flipkart.bean.Professor;
+import com.flipkart.dao.ProfessorDao;
+import com.flipkart.dao.ProfessorDaoImpl;
+
 import java.util.*;
 public class UserClient {
 	
@@ -46,6 +51,20 @@ public class UserClient {
 	}
 	void login() {
 		
+		ProfessorDaoImpl profcred = new ProfessorDaoImpl();
+		logger.info("Enter User Email");
+		String uname = sc.nextLine();
+		logger.info("Enter User Password");
+		String password = sc.nextLine();
+		boolean loginstatus=profcred.checkCredentials(uname, password);
+		if (loginstatus)
+			{
+				logger.info("Successful login as Professor");
+				ProfessorClient pc = new ProfessorClient();
+				ProfessorDao professorDao= new ProfessorDaoImpl();
+				Professor professor = professorDao.getProfessorDetails(uname);
+				pc.displayMenu(professor);
+			}
 	}
 	void logout() {
 		
