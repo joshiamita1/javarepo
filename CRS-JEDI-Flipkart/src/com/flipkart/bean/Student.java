@@ -10,11 +10,11 @@ public class Student extends User {
 	String branch;
 	ArrayList<Course> coursesRegistered;
 	public Student(String userId, String emailId, String name, long mobile, Role role, Gender gender, String studentId,
-			String branch, ArrayList<Course> coursesRegistered) {
+			String branch) {
 		super(userId, emailId, name, mobile, role, gender);
 		StudentId = studentId;
 		this.branch = branch;
-		this.coursesRegistered = coursesRegistered;
+		
 	}
 	public String getStudentId() {
 		return StudentId;
@@ -28,10 +28,10 @@ public class Student extends User {
 	public void setBranch(String branch) {
 		this.branch = branch;
 	}
-	public ArrayList<Course> getCoursesRegistered() {
+	/*public ArrayList<Course> getCoursesRegistered() {
 		return coursesRegistered;
 	}
 	public void setCoursesRegistered(ArrayList<Course> coursesRegistered) {
 		this.coursesRegistered = coursesRegistered;
-	}
+	}*/
 }

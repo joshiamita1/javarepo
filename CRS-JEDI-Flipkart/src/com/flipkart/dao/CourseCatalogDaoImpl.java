@@ -9,9 +9,8 @@ public class CourseCatalogDaoImpl  implements CourseCatalogDao{
 	 List<Course> courseList = new ArrayList<Course>();
 	 
 	 //Course courses[] = new Course[3];
-		
-	@Override
-	public void addCourse(Course course) {
+	public CourseCatalogDaoImpl()
+	 {
 		// TODO Auto-generated method stub
 		
 	
@@ -35,7 +34,12 @@ public class CourseCatalogDaoImpl  implements CourseCatalogDao{
 			courseList.add(course3);
 			
 	}
-	
+	 @Override
+		public void addCourse(Course course)
+		{
+		 
+		}
+	 
 	@Override
 	public void deleteCourse(String courseCode) {
 		for(int i = 0; i < courseList.size(); ++i) {
