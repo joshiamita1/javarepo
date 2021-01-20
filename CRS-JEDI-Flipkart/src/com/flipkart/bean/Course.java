@@ -1,12 +1,20 @@
 package com.flipkart.bean;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Course {
 	String courseCode;
 	String courseName;
-	Student studentsRegistered[];
-	Professor professor;
+	List<Student> studentsRegistered;
+	Professor professor;	
+	public Course(String courseCode, String courseName, List<Student> studentsRegistered, Professor professor) {
+		super();
+		this.courseCode = courseCode;
+		this.courseName = courseName;
+		this.studentsRegistered = new ArrayList<Student>();
+		this.professor = professor;
+	}
 	/**
 	 * @return the courseCode
 	 */
@@ -31,16 +39,17 @@ public class Course {
 	public void setCourseName(String courseName) {
 		this.courseName = courseName;
 	}
+	
 	/**
 	 * @return the studentsRegistered
 	 */
-	public Student[] getStudentsRegistered() {
+	public List<Student> getStudentsRegistered() {
 		return studentsRegistered;
 	}
 	/**
 	 * @param studentsRegistered the studentsRegistered to set
 	 */
-	public void setStudentsRegistered(Student[] studentsRegistered) {
+	public void setStudentsRegistered(List<Student> studentsRegistered) {
 		this.studentsRegistered = studentsRegistered;
 	}
 	/**

@@ -10,6 +10,14 @@ public class User {
 	long mobile;
 	Role role;
 	Gender gender;
+	public User(String userId, String emailId, String name, long mobile, Role role, Gender gender) {
+		this.userId = userId;
+		this.emailId = emailId;
+		this.name = name;
+		this.mobile = mobile;
+		this.role = role;
+		this.gender = gender;
+	}
 	public String getUserId() {
 		return userId;
 	}

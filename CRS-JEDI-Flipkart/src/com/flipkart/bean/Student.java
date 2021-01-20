@@ -2,10 +2,20 @@ package com.flipkart.bean;
 
 import java.util.ArrayList;
 
+import com.flipkart.constant.Gender;
+import com.flipkart.constant.Role;
+
 public class Student extends User {
 	String StudentId;
 	String branch;
 	ArrayList<Course> coursesRegistered;
+	public Student(String userId, String emailId, String name, long mobile, Role role, Gender gender, String studentId,
+			String branch, ArrayList<Course> coursesRegistered) {
+		super(userId, emailId, name, mobile, role, gender);
+		StudentId = studentId;
+		this.branch = branch;
+		this.coursesRegistered = coursesRegistered;
+	}
 	public String getStudentId() {
 		return StudentId;
 	}
