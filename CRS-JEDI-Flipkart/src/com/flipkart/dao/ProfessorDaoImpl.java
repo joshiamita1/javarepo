@@ -5,8 +5,6 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Professor;
-import com.flipkart.bean.User;
-import com.flipkart.business.PaymentBusiness;
 import com.flipkart.constant.Gender;
 import com.flipkart.constant.Role;
 
@@ -47,6 +45,8 @@ public class ProfessorDaoImpl implements ProfessorDao {
 			}
 		}
 	}
+	
+	@Override
 	public Professor getProfessorDetails(String uName) {
 		for(int i = 0; i < professorList.size(); ++i) {
 			if(professorList.get(i).getName().equals(uName)) {
@@ -55,6 +55,8 @@ public class ProfessorDaoImpl implements ProfessorDao {
 		}
 		return null;
 	}
+	
+	@Override
 	public boolean checkCredentials(String uName,String password) {
 		boolean isUnamePresent = professorCreds.containsKey(uName);
 		if (isUnamePresent) {
@@ -69,6 +71,16 @@ public class ProfessorDaoImpl implements ProfessorDao {
 		else {
 			logger.error("UserName invalid");
 			return false;
+		}
+	}
+
+	@Override
+	public void deleteProfessor(String professorId) {
+		for(int i = 0; i < professorList.size(); ++i) {
+			if(professorList.get(i).getUserId().equals(professorId)) {
+				professorList.remove(i);
+				return;
+			}
 		}
 	}
 

@@ -34,6 +34,4 @@ public class Student extends User {
 	public void setCoursesRegistered(ArrayList<Course> coursesRegistered) {
 		this.coursesRegistered = coursesRegistered;
 	}
-	
-	
 }
