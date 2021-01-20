@@ -11,6 +11,4 @@ public interface StudentDao {
 	public void dropCourse(int studentId, int courseId);
 	public ArrayList<Course> viewRegisteredCourses(int studentId);
 	public Map<Course, Grade> viewGrades(int studentId);
-	public void updateGrade(int student, Course course, Grade grade);
-	public void updatePaymentStatus(int studentId, boolean paid);
 }
