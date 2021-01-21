@@ -1,21 +1,26 @@
 package com.flipkart.bean;
 
-import java.util.ArrayList;
 import com.flipkart.constant.*;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
 public class Course {
+	// Course code
 	String courseCode;
+	
+	// Course name
 	String courseName;
-	Map<Student, Grade> studentsGrades;
-	Professor professor;	
+	
+	// Grades of the students enrolled in the course
+	Map<String, Grade> studentsGrades;
+	
+	// Professor of the course
+	Professor professor;
 	public Course(String courseCode, String courseName, Professor professor) {
 		super();
 		this.courseCode = courseCode;
 		this.courseName = courseName;
-		this.studentsGrades = new TreeMap<Student, Grade>();
+		this.studentsGrades = new TreeMap<String, Grade>();
 		this.professor = professor;
 	}
 	/**
@@ -45,13 +50,13 @@ public class Course {
 	/**
 	 * @return the studentsGrades
 	 */
-	public Map<Student, Grade> getStudentsGrades() {
+	public Map<String, Grade> getStudentsGrades() {
 		return studentsGrades;
 	}
 	/**
 	 * @param studentsGrades the studentsGrades to set
 	 */
-	public void setStudentsGrades(Map<Student, Grade> studentsGrades) {
+	public void setStudentsGrades(Map<String, Grade> studentsGrades) {
 		this.studentsGrades = studentsGrades;
 	}
 	/**

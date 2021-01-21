@@ -1,6 +1,7 @@
 package com.flipkart.business;
 
 import java.util.Map;
+import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
@@ -16,6 +17,9 @@ import com.flipkart.constant.Role;
 import com.flipkart.dao.CourseCatalogDaoImpl;
 import com.flipkart.dao.ProfessorDaoImpl;
 
+
+// Add comments
+
 public class ProfessorBusiness {
 	
 	ProfessorDaoImpl professorDaoObject = new ProfessorDaoImpl();
@@ -23,15 +27,17 @@ public class ProfessorBusiness {
 	
 	public static Logger logger = Logger.getLogger(ProfessorBusiness.class);
 	
-	public void gradeStudent(String courseCode, Student student, Grade grade) {
+	public void gradeStudent(String courseCode, Student student1, Grade grade) {
 		Course course = courseCatalogObject.getCourse(courseCode);
 		Map<Student, Grade> mp= course.getStudentsGrades();
+		Student student = null;
+		//student = StudentDaoObj.getStudent(studentId);
 		mp.put(student, grade);
 		courseCatalogObject.modifyCourse(courseCode, course);
 	}
-	public TreeSet<Student> viewRegisteredStudents(String courseCode) {
+	public Set<Student> viewRegisteredStudents(String courseCode) {
 		Course course = courseCatalogObject.getCourse(courseCode);
 		Map<Student, Grade> mp = course.getStudentsGrades();
-		return (TreeSet<Student>) mp.keySet();
+		return mp.keySet();
 	}
 }

@@ -1,0 +1,168 @@
+09:16:14,974  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:16:14,993  INFO UserClient,main:26 - ======User Menu=====
+09:16:14,993  INFO UserClient,main:27 - Enter 1 to login
+09:16:14,994  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:16:14,994  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:16:18,947  INFO UserClient,main:55 - Enter User Email
+09:16:20,808  INFO UserClient,main:57 - Enter User Password
+09:16:22,913 ERROR ProfessorDaoImpl,main:72 - UserName invalid
+09:16:22,914  INFO UserClient,main:26 - ======User Menu=====
+09:16:22,914  INFO UserClient,main:27 - Enter 1 to login
+09:16:22,914  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:16:22,915  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:16:25,806  INFO UserClient,main:55 - Enter User Email
+09:16:30,126  INFO UserClient,main:57 - Enter User Password
+09:16:32,167  INFO UserClient,main:62 - Successful login as Professor
+09:16:32,175  INFO ProfessorClient,main:23 - Select action to perform:
+09:16:32,175  INFO ProfessorClient,main:24 - 1. To view students in a course
+09:16:32,176  INFO ProfessorClient,main:25 - 2. Grade a student
+09:16:32,176  INFO ProfessorClient,main:26 - 9. To logout
+09:17:43,579  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:17:43,583  INFO UserClient,main:26 - ======User Menu=====
+09:17:43,585  INFO UserClient,main:27 - Enter 1 to login
+09:17:43,585  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:17:43,586  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:17:45,239  INFO UserClient,main:55 - Enter User Email
+09:17:53,040  INFO UserClient,main:57 - Enter User Password
+09:17:54,175  INFO UserClient,main:62 - Successful login as Professor
+09:17:54,180  INFO ProfessorClient,main:23 - Select action to perform:
+09:17:54,180  INFO ProfessorClient,main:24 - 1. To view students in a course
+09:17:54,180  INFO ProfessorClient,main:25 - 2. Grade a student
+09:17:54,181  INFO ProfessorClient,main:26 - 9. To logout
+09:19:24,166  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:19:24,168  INFO UserClient,main:26 - ======User Menu=====
+09:19:24,168  INFO UserClient,main:27 - Enter 1 to login
+09:19:24,169  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:19:24,169  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:19:25,742  INFO UserClient,main:55 - Enter User Email
+09:19:29,959  INFO UserClient,main:57 - Enter User Password
+09:19:30,856  INFO UserClient,main:62 - Successful login as Professor
+09:19:30,860  INFO ProfessorClient,main:24 - Select action to perform:
+09:19:30,861  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:19:30,861  INFO ProfessorClient,main:26 - 2. Grade a student
+09:19:30,862  INFO ProfessorClient,main:27 - 9. To logout
+09:19:32,225  INFO ProfessorClient,main:24 - Select action to perform:
+09:19:32,225  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:19:32,226  INFO ProfessorClient,main:26 - 2. Grade a student
+09:19:32,226  INFO ProfessorClient,main:27 - 9. To logout
+09:20:25,294  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:20:25,297  INFO UserClient,main:26 - ======User Menu=====
+09:20:25,297  INFO UserClient,main:27 - Enter 1 to login
+09:20:25,297  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:20:25,298  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:20:28,289  INFO UserClient,main:55 - Enter User Email
+09:20:34,028  INFO UserClient,main:57 - Enter User Password
+09:20:37,470  INFO UserClient,main:62 - Successful login as Professor
+09:20:37,473  INFO ProfessorClient,main:24 - Select action to perform:
+09:20:37,473  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:20:37,473  INFO ProfessorClient,main:26 - 2. Grade a student
+09:20:37,473  INFO ProfessorClient,main:27 - 9. To logout
+09:20:39,726  INFO ProfessorClient,main:24 - Select action to perform:
+09:20:39,727  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:20:39,727  INFO ProfessorClient,main:26 - 2. Grade a student
+09:20:39,727  INFO ProfessorClient,main:27 - 9. To logout
+09:21:35,453  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:21:35,455  INFO UserClient,main:26 - ======User Menu=====
+09:21:35,456  INFO UserClient,main:27 - Enter 1 to login
+09:21:35,456  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:21:35,456  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:21:37,936  INFO UserClient,main:55 - Enter User Email
+09:21:43,320  INFO UserClient,main:57 - Enter User Password
+09:21:44,248  INFO UserClient,main:62 - Successful login as Professor
+09:21:44,253  INFO ProfessorClient,main:24 - Select action to perform:
+09:21:44,254  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:21:44,254  INFO ProfessorClient,main:26 - 2. Grade a student
+09:21:44,255  INFO ProfessorClient,main:27 - 9. To logout
+09:21:47,093  INFO ProfessorClient,main:24 - Select action to perform:
+09:21:47,093  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:21:47,094  INFO ProfessorClient,main:26 - 2. Grade a student
+09:21:47,094  INFO ProfessorClient,main:27 - 9. To logout
+09:21:59,158  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:21:59,160  INFO UserClient,main:26 - ======User Menu=====
+09:21:59,160  INFO UserClient,main:27 - Enter 1 to login
+09:21:59,161  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:21:59,161  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:22:00,750  INFO UserClient,main:55 - Enter User Email
+09:22:08,234  INFO UserClient,main:57 - Enter User Password
+09:22:09,165  INFO UserClient,main:62 - Successful login as Professor
+09:22:09,172  INFO ProfessorClient,main:24 - Select action to perform:
+09:22:09,173  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:22:09,174  INFO ProfessorClient,main:26 - 2. Grade a student
+09:22:09,175  INFO ProfessorClient,main:27 - 9. To logout
+09:22:36,684  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:22:36,686  INFO UserClient,main:26 - ======User Menu=====
+09:22:36,686  INFO UserClient,main:27 - Enter 1 to login
+09:22:36,686  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:22:36,686  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:22:47,098  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:22:47,101  INFO UserClient,main:26 - ======User Menu=====
+09:22:47,102  INFO UserClient,main:27 - Enter 1 to login
+09:22:47,102  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:22:47,102  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:22:49,476  INFO UserClient,main:55 - Enter User Email
+09:22:52,408  INFO UserClient,main:57 - Enter User Password
+09:22:54,497  INFO UserClient,main:62 - Successful login as Professor
+09:22:54,505  INFO ProfessorClient,main:24 - Select action to perform:
+09:22:54,506  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:22:54,506  INFO ProfessorClient,main:26 - 2. Grade a student
+09:22:54,507  INFO ProfessorClient,main:27 - 9. To logout
+09:22:56,330  INFO ProfessorClient,main:24 - Select action to perform:
+09:22:56,331  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:22:56,331  INFO ProfessorClient,main:26 - 2. Grade a student
+09:22:56,332  INFO ProfessorClient,main:27 - 9. To logout
+09:49:29,152  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:49:29,157  INFO UserClient,main:26 - ======User Menu=====
+09:49:29,157  INFO UserClient,main:27 - Enter 1 to login
+09:49:29,158  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:49:29,158  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:54:52,162  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:54:52,165  INFO UserClient,main:26 - ======User Menu=====
+09:54:52,165  INFO UserClient,main:27 - Enter 1 to login
+09:54:52,165  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:54:52,165  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:54:55,309  INFO UserClient,main:55 - Enter User Email
+09:55:00,638  INFO UserClient,main:57 - Enter User Password
+09:55:01,825 ERROR ProfessorDaoImpl,main:72 - UserName invalid
+09:55:01,825  INFO UserClient,main:26 - ======User Menu=====
+09:55:01,826  INFO UserClient,main:27 - Enter 1 to login
+09:55:01,826  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:55:01,826  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:55:05,439  INFO UserClient,main:55 - Enter User Email
+09:55:10,340  INFO UserClient,main:57 - Enter User Password
+09:55:11,246  INFO UserClient,main:62 - Successful login as Professor
+09:55:11,253  INFO ProfessorClient,main:24 - Select action to perform:
+09:55:11,253  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:55:11,253  INFO ProfessorClient,main:26 - 2. Grade a student
+09:55:11,253  INFO ProfessorClient,main:27 - 9. To logout
+09:55:44,462  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:55:44,469  INFO UserClient,main:26 - ======User Menu=====
+09:55:44,469  INFO UserClient,main:27 - Enter 1 to login
+09:55:44,470  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:55:44,470  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:55:47,737  INFO UserClient,main:55 - Enter User Email
+09:55:50,733  INFO UserClient,main:57 - Enter User Password
+09:55:51,580  INFO UserClient,main:62 - Successful login as Professor
+09:55:51,583  INFO ProfessorClient,main:24 - Select action to perform:
+09:55:51,583  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:55:51,584  INFO ProfessorClient,main:26 - 2. Grade a student
+09:55:51,584  INFO ProfessorClient,main:27 - 9. To logout
+09:55:58,925  INFO ProfessorClient,main:24 - Select action to perform:
+09:55:58,926  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:55:58,926  INFO ProfessorClient,main:26 - 2. Grade a student
+09:55:58,926  INFO ProfessorClient,main:27 - 9. To logout
+09:56:41,914  INFO UserClient,main:16 - Welcome to the Course Registration System
+09:56:41,916  INFO UserClient,main:26 - ======User Menu=====
+09:56:41,916  INFO UserClient,main:27 - Enter 1 to login
+09:56:41,917  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:56:41,917  INFO UserClient,main:29 - Enter any other number to exit CRS
+09:56:42,858  INFO UserClient,main:55 - Enter User Email
+09:56:45,971  INFO UserClient,main:57 - Enter User Password
+09:56:46,754  INFO UserClient,main:62 - Successful login as Professor
+09:56:46,759  INFO ProfessorClient,main:24 - Select action to perform:
+09:56:46,760  INFO ProfessorClient,main:25 - 1. To view students in a course
+09:56:46,761  INFO ProfessorClient,main:26 - 2. Grade a student
+09:56:46,761  INFO ProfessorClient,main:27 - 9. To logout
+09:56:48,376  INFO UserClient,main:26 - ======User Menu=====
+09:56:48,376  INFO UserClient,main:27 - Enter 1 to login
+09:56:48,377  INFO UserClient,main:28 - Enter 2  to register as a new student student
+09:56:48,377  INFO UserClient,main:29 - Enter any other number to exit CRS

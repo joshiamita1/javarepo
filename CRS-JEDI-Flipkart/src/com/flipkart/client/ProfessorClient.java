@@ -1,6 +1,7 @@
 package com.flipkart.client;
 import org.apache.log4j.Logger;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeSet;
 
 import org.apache.log4j.Logger;
@@ -29,7 +30,7 @@ public void displayMenu(Professor professor) {
 		switch(choice) {
 		
 		case 1:
-			TreeSet<Student> studentlist=profbusiness.viewRegisteredStudents("101");
+			Set<Student> studentlist=profbusiness.viewRegisteredStudents("101");
 			for(Student st:studentlist) {
 				logger.info(st.getName()+" "+ st.getStudentId());
 			}
@@ -43,7 +44,7 @@ public void displayMenu(Professor professor) {
 		}
 	
 	}while(choice!=9);
-	sc.close();	
+	//sc.close();	
 	UserClient.showUserMenu();
 	}
 }
