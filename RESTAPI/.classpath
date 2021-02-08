@@ -14,12 +14,12 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Joshi_Amita/Downloads/log4j-1.2.11.jar/log4j-1.2.11.jar">
+	<classpathentry kind="lib" path="C:/Users/Joshi_Amita/Downloads/temp/json-simple-1.1.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Joshi_Amita/Downloads/temp/json-simple-1.1.jar">
+	<classpathentry kind="lib" path="C:/Users/Joshi_Amita/Downloads/work/lib/log4j-1.2.12.jar">
 		<attributes>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>

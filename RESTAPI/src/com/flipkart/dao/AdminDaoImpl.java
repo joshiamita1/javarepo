@@ -48,9 +48,9 @@ public class AdminDaoImpl implements AdminDao{
 			stmt = connection.prepareStatement(SQLQueriesConstant.ADD_NEW_ADMIN_QUERY);
 			stmt.setInt(1, userId);
 			if(admin.getGender()!=null)
-				stmt.setString(3,String.valueOf(admin.getGender()));
+				stmt.setString(2,String.valueOf(admin.getGender()));
 			else
-				stmt.setString(3,null);
+				stmt.setString(2,null);
 			stmt.setString(3, admin.getCity());
 			stmt.setString(4, admin.getAddress());
 			stmt.setString(5,  admin.getCountry());

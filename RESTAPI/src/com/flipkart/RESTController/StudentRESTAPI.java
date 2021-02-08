@@ -23,6 +23,7 @@ import org.apache.log4j.Logger;
 
 import com.flipkart.bean.Course;
 import com.flipkart.bean.Student;
+import com.flipkart.business.AuthenticateBusiness;
 import com.flipkart.business.CourseCatalogBusiness;
 import com.flipkart.business.StudentBusiness;
 import com.flipkart.constant.Grade; 
@@ -34,6 +35,7 @@ public class StudentRESTAPI {
 	 */
 	CourseCatalogBusiness courseCatalogBusinessObject = CourseCatalogBusiness.getInstance();
 	StudentBusiness studentBusinessObject = StudentBusiness.getInstance();
+	AuthenticateBusiness authenticateBusinessObject = AuthenticateBusiness.getInstance();
 	private static Logger logger = Logger.getLogger(StudentRESTAPI.class);
 	
 	private static final String text = "Message from Server :\n%s";
@@ -51,12 +53,24 @@ public class StudentRESTAPI {
 			
 	}
 	
+	/**
+	 * @param 
+	 * getAllCourses
+	 * @return 
+	 */
+	
 	@GET
 	@Path("/courses/all")
 	@Produces(MediaType.APPLICATION_JSON)
 	public ArrayList<Course> getAllCourses() {
 		return courseCatalogBusinessObject.viewAllCourses();
 	}
+	/**
+	 * @param studentId
+	 * viewGrades
+	 * @return 
+	 */
+	
 	
 	@GET
 	@Path("viewGrade/{studentId}")
@@ -65,6 +79,12 @@ public class StudentRESTAPI {
 		
 		return studentBusinessObject.printReportCard(studentId);
 	}
+	
+	/**
+	 * @param studentId
+	 * registerCourse
+	 * @return 
+	 */
 	
 	@POST
 	@Path("/courses/register/{studentId}")
@@ -75,6 +95,12 @@ public class StudentRESTAPI {
 		return Response.status(201).entity("Registered to courseId: "+course.getCourseCode()+ " Successfully").build();
 	}
 	
+	/**
+	 * @param studentId,courseId
+	 * registerCourse
+	 * @return 
+	 */
+	
 	@DELETE
 	@Path("/courses/drop/{studentId}/{courseId}")
 	public Response deleteCustomer(@PathParam("studentId") int studentId, @PathParam("courseId") int courseId) {
@@ -82,6 +108,11 @@ public class StudentRESTAPI {
 		return Response.status(200).entity("successfully deleted").build();
 		
 	}
+	/**
+	 * @param studentId,choice
+	 * payFees
+	 * @return 
+	 */
 	
 	@PUT
 	@Path("/payFees/{studentId}/{choice}")
@@ -95,42 +126,50 @@ public class StudentRESTAPI {
 	}
 	
 	
-	@GET
-    @Consumes(MediaType.TEXT_PLAIN)
-    public Response registerStudent() {
-        String response = String.format(text, new Date());
-        return Response.status(Response.Status.OK).entity(response).type(MediaType.TEXT_PLAIN).build();
-    }
- 
-
+//	@GET
+//    @Consumes(MediaType.TEXT_PLAIN)
+//    public Response registerStudent() {
+//        String response = String.format(text, new Date());
+//        return Response.status(Response.Status.OK).entity(response).type(MediaType.TEXT_PLAIN).build();
+//    }
+// 
+	/**
+	 * @param 
+	 * registerStudent
+	 * @return 
+	 */
+	
+	
+	 @GET
+	    @Path("/validate")
+	    public Response validateStudent(
+	            @Size(min = 2, max = 25, message = "firstName Length should be between 2 and 25 character")
+	            @QueryParam("firstName") String firstName,
+	 
+	            @Size(min = 2, max = 25, message = "lastName Length should be between 2 and 25 character")
+	            @QueryParam("lastName") String lastName,
+	 
+	            @Min(value = 15, message = "age should not be less that 15")
+	            @QueryParam("age")
+	                    String age) throws ValidationException {
+	 
+	        String student = String.format("firstName: %s, lastName: %s, age: %s", firstName, lastName, age);
+	        String response = String.format(text, student);
+	        return Response.status(Response.Status.OK).entity(response).type(MediaType.TEXT_PLAIN).build();
+	    }
+	
     @POST
     @Path("/register")
     public Response registerStudent(
-            @Valid Student student) throws ValidationException {
- 
-        String response = String.format(text, student);
-        return Response.status(Response.Status.OK).entity(response).type(MediaType.TEXT_PLAIN).build();
-    }
-}
+           @Valid Student student) throws ValidationException
+      { 
+    	 
+        //String response = String.format(text, student);
+        return Response.status(Response.Status.OK).entity("sucess").build();
+      }
 	
-//	@GET
-//    @Path("/validate")
-//    public Response validateStudent(
-//            @Size(min = 2, max = 25, message = "firstName Length should be between 2 and 25 character")
-//            @QueryParam("firstName") String firstName,
-// 
-//            @Size(min = 2, max = 25, message = "lastName Length should be between 2 and 25 character")
-//            @QueryParam("lastName") String lastName,
-// 
-//            @Min(value = 15, message = "age should not be less that 15")
-//            @QueryParam("age")
-//                    String age) throws ValidationException {
-// 
-//        String student = String.format("firstName: %s, lastName: %s, age: %s", firstName, lastName, age);
-//        String response = String.format(text, student);
-//        return Response.status(Response.Status.OK).entity(response).type(MediaType.TEXT_PLAIN).build();
-//    	
-//	}
+	
+	}
 
 
 	

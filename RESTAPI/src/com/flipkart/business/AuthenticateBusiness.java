@@ -43,9 +43,6 @@ public class AuthenticateBusiness {
 	/**
 	 * Private Constructor
 	 */
-	private AuthenticateBusiness() {
-
-	}
 	
 	/**
 	 * @return Instance of the class

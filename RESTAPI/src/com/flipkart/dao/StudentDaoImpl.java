@@ -126,25 +126,16 @@ public class StudentDaoImpl implements StudentDao {
 	@Override
 	public void addStudent(Student student, String password) {
 		PreparedStatement statement = null;
-		UserDaoImpl userdao = UserDaoImpl.getInstance();
-		userdao.addUser(student, password);
-		int userId = 0;
 		try {
-			statement = connection.prepareStatement(SQLQueriesConstant.GET_LAST_ENTRY);
+			UserDaoImpl userdao = UserDaoImpl.getInstance();
+			userdao.addUser(student, password);
+			statement =connection.prepareStatement(SQLQueriesConstant.GET_LAST_ENTRY);
 			ResultSet resultSet = statement.executeQuery();
-			if (resultSet.next()) {
-				userId = resultSet.getInt("ID");
-				logger.info("extracted " + userId);
+			int userId=0;
+			if(resultSet.next()){
+				userId=resultSet.getInt("ID");
 			}
-
-		} catch (Exception e) {
-			logger.error(e.getMessage());
-
-		}
-
-		try {
 			statement = connection.prepareStatement(SQLQueriesConstant.ADD_STUDENT_QUERY);
-			//StudentId, Name,Email,Mobile,Gender, branch, hasScholarship, isApproved,city, address,state)
 			statement.setInt(1, userId);
 			statement.setString(2, student.getName());
 			statement.setString(3, student.getEmailId());
@@ -157,19 +148,18 @@ public class StudentDaoImpl implements StudentDao {
 			statement.setString(9, student.getCity());
 			statement.setString(10, student.getAddress());
 			statement.setString(11, student.getState());
-			int rows = statement.executeUpdate();
-			if (rows > 0) {
-				logger.info("Added Student sucessfully");
-			} else {
-				logger.info("Error during insertion");
-			}
-
-		} catch (Exception e) {
+		
+		}catch(SQLException se) {
+			logger.error(se.getMessage());
+		}catch(Exception e) {
 			logger.error(e.getMessage());
+		}
+			
+		
 
 		}
 
-	}
+	
 
 
 	@Override

@@ -37,6 +37,13 @@ public class AdminRESTAPI {
 	AdminBusiness adminBusinessObject = AdminBusiness.getInstance();
 	AuthenticateBusiness authenticateBusinessObject = AuthenticateBusiness.getInstance();
 	
+	/**
+	 * @param catalogId
+	 * getCoursesInCatalog
+	 * @return 
+	 */
+	
+	
 	@GET
 	@Path("/courses/catalog/{catalogId}")
 	@Produces(MediaType.APPLICATION_JSON)
@@ -44,12 +51,24 @@ public class AdminRESTAPI {
 		return courseCatalogBusinessObject.viewCoursesInCatalog(catalogId);
 	}
 	
+	/**
+	 * @param
+	 * getAllCourses
+	 * @return 
+	 */
+	
 	@GET
 	@Path("/courses/all")
 	@Produces(MediaType.APPLICATION_JSON)
 	public ArrayList<Course> getAllCourses() {
 		return courseCatalogBusinessObject.viewAllCourses();
 	}
+	
+	/**
+	 * @param Role
+	 * getUsersOfSpecificRole
+	 * @return 
+	 */
 	
 	@GET
 	@Path("/viewUsers/{Role}")
@@ -59,6 +78,12 @@ public class AdminRESTAPI {
 		List<User> userList = adminBusinessObject.getUsers(Role.valueOf(role));
 		return userList;
 	}
+	
+	/**
+	 * @param 
+	 * assignProfessor
+	 * @return 
+	 */
 	
 	@PUT
 	@Path("/courses/assign")
@@ -71,12 +96,18 @@ public class AdminRESTAPI {
 		adminBusinessObject.assignProfessor(courseId, professorId);
 		return "SUCCESS";
 	}
+	/**
+	 * @param 
+	 * registerUser
+	 * @return 
+	 */
+	
 	
 	@POST
 	@Path("/user/register")
 	@Consumes("application/json")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response registerStudent(JSONObject obj) {
+	public Response registerUser(JSONObject obj) {
 		String password = (String) obj.get("password");
 		ObjectMapper objectMapper = new ObjectMapper();
 		
@@ -94,6 +125,12 @@ public class AdminRESTAPI {
 			return Response.status(201).entity("registraition failed").build(); 
 	}
 	
+	/**
+	 * @param userId
+	 * deleteuser
+	 * @return 
+	 */
+	
 	@DELETE
 	@Path("/user/delete/{userId}")
 	public Response deleteuser(@PathParam("userId") int userId) {
@@ -101,6 +138,11 @@ public class AdminRESTAPI {
 		return Response.status(200).entity("successfully deleted").build();
 		
 	}
+	/**
+	 * @param 
+	 * addcourse
+	 * @return 
+	 */
 	
 	
 	@POST
@@ -112,7 +154,13 @@ public class AdminRESTAPI {
 		return Response.status(201).entity(course.toString()).build();
 		
 	}
-
+	/**
+	 * @param
+	 * getCoursesInCatalog
+	 * @return 
+	 */
+	
+	
 	@DELETE
 	@Path("/course/delete/{courseId}")
 	public Response dropcourse(@PathParam("courseId") int courseId) {
@@ -120,6 +168,13 @@ public class AdminRESTAPI {
 		return Response.status(200).entity("successfully deleted").build();
 		
 	}
+	
+	/**
+	 * @param 
+	 * approveStudent
+	 * @return 
+	 */
+	
 	
 	@PUT
 	@Path("/user/student/approve/")

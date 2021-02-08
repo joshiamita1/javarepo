@@ -126,7 +126,12 @@ public class AdminBusiness{
 		}
 
 	}
-
+	/**
+	 * @param courseId
+	 * @param professorId
+	 * Assign Professor to the course
+	 */
+	
 	public void viewUnapprovedStudent(){
 		ArrayList<Integer> studentlist=studentDaoObject.viewUnapprovedStudents();
 		logger.info(String.format("%20s %20s","Student ID :","Student Name"));

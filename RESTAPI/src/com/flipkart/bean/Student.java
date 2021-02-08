@@ -1,35 +1,73 @@
 package com.flipkart.bean;
-
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-import javax.xml.bind.annotation.XmlRootElement;
 
 import com.flipkart.constant.Department;
-       
-      
-@XmlRootElement(name = "student") 
-public class Student extends User 
-     {
+    
+//@XmlRootElement(name = "student") 
+public class Student extends User  
+{
 	// Branch of the student
 	
-	   @DecimalMin(value = "15", message = "Student shall be minimum of age 15 yr")
-	   @DecimalMax(value = "30", message = "Student can not have age more than 30 yr")
-	   private int age;
+	
+	 
+	 String password;
+	 
+	 @DecimalMin(value = "15", message = "Student shall be minimum of age 15 yr")
+	    @DecimalMax(value = "30", message = "Student can not have age more than 30 yr")
+	    private int age;
+	 
+	    @Size(min = 1, max = 25, message = "The length of firstName should be between 1 to 25")
+	    private String firstName;
+	 
+	    @Size(min = 1, max = 25, message = "The length of firstName should be between 1 to 25")
+	    private String lastName;
+	 
+	 
+	 public String getPassword() {
+		return password;
+	}
 
-	   @Size(min = 1, max = 25, message = "The length of firstName should be between 1 to 25")
-	   private String firstName;
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-	   @Size(min = 1, max = 25, message = "The length of firstName should be between 1 to 25")
-	   private String lastName;
-	   
-	   @Pattern(message = "Invalid Email Address->" +
-	            "Valid emails:user@gmail.com or my.user@domain.com etc.",
-	            regexp = "^[a-zA-Z0-9_!#$%&�*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$")
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
 
 	
-	private Department branch;
+	   public int getAge() {
+	        return age;
+	    }
+	 
+	    public String getFirstName() {
+	        return firstName;
+	    }
+	 
+	    public String getLastName() {
+	        return lastName;
+	    }
+	   
+	    public Student() {
+	    	 
+	    }
+	 
+	    public String toString() {
+	        return String.format("firstName : %s, lastName : %s, age: %s",
+	                firstName, lastName, age);
+	    }
+	   
+	   	private Department branch;
 	
 	// Scholarship is provided or not
 	boolean hasScholarship;

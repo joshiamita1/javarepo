@@ -29,12 +29,23 @@ public class ProfessorRESTAPI {
 	ProfessorBusiness professorBusinessObject = ProfessorBusiness.getInstance();
 	StudentBusiness studentBusinessObject = StudentBusiness.getInstance();
 		//think this might be same as student
+	/**
+	 * @param 
+	 * getAllCourses
+	 * @return 
+	 */
 		@GET
 		@Path("/courses/all")
 		@Produces(MediaType.APPLICATION_JSON)
 		public ArrayList<Course> getAllCourses() {
 			return courseCatalogBusinessObject.viewAllCourses();
 		}
+		
+		/**
+		 * @param professorId
+		 * getAssignedCourses
+		 * @return 
+		 */
 		
 		@GET
 		@Path("/courses/assigned/{professorId}")
@@ -43,6 +54,12 @@ public class ProfessorRESTAPI {
 			return professorBusinessObject.viewAssignedCourses( professorId);
 		}
 
+		/**
+		 * @param professorId,courseId
+		 *  viewStudents
+		 * @return 
+		 */
+		
 		@GET
 		@Path("/viewStudents/{professorId}/{courseId}")
 		@Produces(MediaType.APPLICATION_JSON)
